@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Selfie por voz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>App Selfie por voz
+            <img id="logo_img" src="logo.png" alt="Logo">
+        </h1>
+        <hr>
+        <h4>Pressione permitir assim que o pop-up for exibido. Depois de dar um comando de voz</h4>
+
+        <div class="form-group">
+            <h3>Clique no botão Iniciar e diga "Tire minha selfie"</h3>
+            <label>Sua saída de voz:</label>
+            <textarea class="form-control" id="textbox" readonly></textarea>
+        </div>
+
+        <button class="btn btn-primary" onclick="start()">Iniciar</button>
+
+        <div class="images-container">
+            <div class="webcam-box">
+                <label>Sua webcam:</label>
+                <div id="camera"></div>
+            </div>
+            <div class="result-box">
+                <label>Sua selfie será exibida aqui:</label>
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
