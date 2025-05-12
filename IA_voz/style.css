@@ -1,3 +1,4 @@
+/* Seu CSS original */
 body {
     background-color: #9beaea;
     font-family: Arial, sans-serif;
@@ -64,4 +65,51 @@ h4 {
 
 .form-group {
     margin: 25px 0;
+}
+
+/* Novos elementos adicionados (sem alterar estilo existente) */
+#camera {
+    width: 320px;
+    height: 240px;
+    margin: 10px auto;
+}
+
+#result {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    height: 240px;
+    overflow-y: auto;
+}
+
+.selfie-image {
+    width: 150px;
+    height: 120px;
+    border: 2px solid #666;
+    margin: 5px;
+    object-fit: cover;
+}
+
+/* Ajuste responsivo mantendo seu estilo */
+@media (max-width: 768px) {
+    .images-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .webcam-box, .result-box {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        padding-bottom: 15px;
+    }
+    
+    #camera {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4/3;
+    }
 }
